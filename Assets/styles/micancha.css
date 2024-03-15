@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../imagenes/fondoooooo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*MENU*/
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0a141d;
+    width: 100%;
+    height: 100px;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+}
+
+.logo {
+    width: 300px;
+    height: 100px;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+    margin-right: 40px;
+    margin-top: 30px;
+}
+
+.ov-btn-slide-right {
+background: #0a141d;
+color:  rgb(255, 255, 255);
+border: 2px solid  rgb(0, 15, 146);
+padding: 6px 20px;
+border-radius: 15px;
+position: relative;
+z-index: 1;
+overflow: hidden;
+display: inline-block;
+margin-top: -6px;
+text-decoration: none;
+}
+
+.ov-btn-slide-right:hover {
+color: #fff;
+}
+
+.ov-btn-slide-right::after {
+content: "";
+background:  rgb(0, 15, 146);
+position: absolute;
+z-index: -1;
+padding: 16px 20px;
+display: block;
+top: 0;
+bottom: 0;
+left: 100%;
+right: -100%;
+-webkit-transition: all 0.35s;
+transition: all 0.35s;
+}
+.ov-btn-slide-right:hover::after {
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+-webkit-transition: all 0.35s;
+transition: all 0.35s;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-list li a:hover {
+    color: #ffffff;
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+        position: fixed;
+        right: 0;
+    }
+
+    .abrir-menu {
+        color: #ffffff;
+    }
+
+    .cerrar-menu {
+        color: #ffffff;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000000;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        z-index: 100;
+        position: fixed;
+        top: 0;
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a {
+        color: #ffffffec;
+    }
+}
+
+/*FOOTER*/
+/*:::::Pie de Pagina*/
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2px 0;
+    margin-top: 465px;
+    
+}
+
+.card-header{
+margin-top: 120px;
+text-align: center;
+}
+
